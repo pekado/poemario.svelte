@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap');
+@import url(./fonts/MonumentExtended-Regular.otf);
+@import url(./fonts/GoshaSans-Regular.otf);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Monument;
+  src: url(./fonts/MonumentExtended-Regular.otf);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #e5bcbc, #f79797, #f8f7c3, #e9fac3);
+  background-size: 800% 3000%;
+  -webkit-animation: Gradient 8s ease infinite;
+  -moz-animation: Gradient 8s ease infinite;
+  animation: Gradient 8s ease infinite;
+  font-family: 'Monument', sans-serif;
+  margin: auto 0;
+  text-align: center;
+  font-weight: 300;letter-spacing: 0.043em;font-style: italic;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
