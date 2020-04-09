@@ -11,6 +11,11 @@
 <style>
     p{
         margin: 2rem;
+        font-family: 'Helvetica', sans-serif;
+
+    }
+    div{
+        padding: 1.3rem;
     }
 </style>
 {#if openModal}
