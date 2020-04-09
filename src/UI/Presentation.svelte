@@ -16,6 +16,7 @@
     }
     div{
         padding: 1.3rem;
+        
     }
 </style>
 {#if openModal}
