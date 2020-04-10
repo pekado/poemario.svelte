@@ -23,16 +23,7 @@
   <Modal on:cancel={closeModal}>
     <div slot="presentation">
       <p>
-        Este sitio fue creado para la critica de poesía y derivados. Ante la
-        cuarentena y la falta de transparencia en los talleres literarios,
-        formamos una plataforma para depositar poemas u otres que serán
-        criticados anónimamente. Los poemas pueden llevar autor, homónimo,
-        pseudonimo o nada pero ten en cuenta que se puede filtrar por autor y ,
-        así, buscar poemas específicos. Los poemas se disponen del más nuevo al
-        más viejo, al final de ellos puedes hacer una o infinitas críticas
-        anónimas. Al agregar un poema, tienes una vista previa para que no se
-        corten los versos. Solicitamos honestidad y profundidad en las
-        devoluciones, como una puñalada.
+       Este sitio fue creado para la crítica de poesía y derivados. Ante la cuarentena y la falta de transparencia en los talleres literarios, formamos una plataforma para depositar poemas u otres que serán criticados anónimamente. Los poemas pueden llevar autor, homónimo, pseudónimo o nada pero ten en cuenta que se puede filtrar por autor y, así, buscar poemas específicos. Los poemas se disponen del más nuevo al más viejo, al final de ellos puedes hacer una o infinitas críticas anónimas. Al agregar un poema, tienes una vista previa para que no se corten los versos. Por esto mismo, recomendamos no usar celular para agregar o leer poemas, ya que puede cambiar el sentido y disposición de los escritos. Solicitamos honestidad y profundidad en las devoluciones, como una puñalada.
       </p>
       <Button action="Cerrar" on:openModal={closeModal} />
     </div>
