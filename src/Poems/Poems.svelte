@@ -33,17 +33,22 @@
         }
         return res.json();
       })
-      .then(data => {
+      .then(data => {if (data === null) {
+        hiddenPoem = false;
+        x = false;
+      } else {
         let filteredComments = Object.values(data);
         console.log(filteredComments);
         x = filteredComments.filter(c => c.titulo === titulo);
+      }
+        
         // .filter(function(aut) {
         //   return aut. == cuerpo;
       })
       .then(() => {
         console.log(x);
         commentStore.setComments(x);
-        hiddenPoem = false;
+         hiddenPoem = false;
       });
   }
   function sendComment() {
@@ -151,12 +156,14 @@
         <hr>
   <h3 class="monument">Críticas, devoluciones, comentarios.</h3>
   <hr>
+    {#if x}
         {#each $commentStore as comment, i}
           <div>
             <p>{comment.comment}</p>
           </div>
           <hr>
         {/each}
+        {/if}
         <TextInput
           id="comentario"
           label="Devolución, crítica, puñalada"

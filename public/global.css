@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap');
-@import url(./fonts/MonumentExtended-Regular.otf);
-@import url(./fonts/GoshaSans-Regular.otf);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
