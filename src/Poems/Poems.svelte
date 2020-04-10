@@ -147,6 +147,8 @@
   {#if !hiddenPoem}
     <Modal on:cancel={() => (hiddenPoem = true)}>
       <div slot="poem" id="poem" transition:fade={{ delay: 300 }}>
+      <h3 class="monument">{titulo}</h3>
+      <br>
         <p
           style="white-space: pre-line;"
           class="text-sm text-grey-dark font-hairline"
