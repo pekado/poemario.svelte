@@ -113,7 +113,7 @@
           contenteditable="true"
           bind:innerHTML={cuerpo} />
           <p style="font-family: Helvetica">Esta es una previa de tu POEMA,<br>no queremos que nos corten los versos/besos:<br></p>
-        <p style="white-space: pre; style=font-family: Helvetica;
+        <p style="white-space: pre; font-family: Helvetica;
     font-style: normal;">{cuerpo}</p>
         <button
           class="shadow-lg pt-3 pb-3 w-full text-gray bg-indigo

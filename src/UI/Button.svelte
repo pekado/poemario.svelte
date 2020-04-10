@@ -3,7 +3,7 @@
  
   let dispatch = createEventDispatcher();
 
-  export let action;
+  export let action = "";
  </script>
 
 <style>
