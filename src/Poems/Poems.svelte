@@ -189,7 +189,7 @@
           value={comment}
           on:input={event => (comment = event.target.value)}
           placeholder="Sueltese" />
-        <Button action="Herir" on:openModal={sendComment}  disabled={!commentIsValid}></Button> />
+        <Button action="Herir" on:openModal={sendComment}  disabled={!commentIsValid}></Button> 
         <Button on:openModal={() => (hiddenPoem = true)} action="Cerrar" />
       </div>
 
