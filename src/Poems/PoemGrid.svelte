@@ -8,7 +8,7 @@
 
   let oneAuthor = false;
   // $: onlyOneAuthor = oneAuthor ? poemsStore.filter(a => a.autor) : poemsStore;
-
+  
   
 </script>
 

@@ -7,12 +7,14 @@
   import { fade, fly, slide, scale } from "svelte/transition";
   import { flip } from "svelte/animate";
   import commentStore from "./comments-store.js";
+  import { isEmpty } from "../helpers/validation.js";
 
   export let titulo;
   export let fecha;
   export let autor;
   export let cuerpo;
   let comment = "";
+  let commentIsValid = false;
   let x;
   $: commentInput = {
     comment: comment,
@@ -20,7 +22,6 @@
   };
   let hiddenPoem = true;
   let dispatch = createEventDispatcher();
-
   function getCuerpo() {
     const unsubscribe = poemsStore.subscribe(pms => {
       cuerpo = pms.find(p => p.titulo === titulo).cuerpo;
@@ -52,7 +53,10 @@
       });
   }
   function sendComment() {
-    fetch("https://poemario-407fa.firebaseio.com/comments.json", {
+    if (isEmpty(comment)) {
+      !commentIsValid
+    } else {
+      fetch("https://poemario-407fa.firebaseio.com/comments.json", {
       method: "POST",
       body: JSON.stringify(commentInput),
       headers: {
@@ -65,9 +69,20 @@
       commentStore.updateComments(commentInput);
     });
   }
+    }
+    
 </script>
 
 <style>
+ .invalid {
+    border-color: red;
+    background-color: rgb(245, 206, 206);
+  }
+
+  .error-message {
+    color: red;
+    margin: 0.25rem 0;
+  }
   .monument{
     font-family: "Monument"
   }
@@ -174,7 +189,7 @@
           value={comment}
           on:input={event => (comment = event.target.value)}
           placeholder="Sueltese" />
-        <Button action="Herir" on:openModal={sendComment} />
+        <Button action="Herir" on:openModal={sendComment}  disabled={!commentIsValid}></Button> />
         <Button on:openModal={() => (hiddenPoem = true)} action="Cerrar" />
       </div>
 
